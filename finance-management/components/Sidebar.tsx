@@ -12,13 +12,13 @@ const Sidebar = ({ user }: SidebarProps) => {
 
       <nav className='flex flex-col gap-4'>
         {/* Correct Navigation Link */}
-        <Link href='/' className='mb-12 flex items-center gap-2'>
+        <Link href='/' className='flex mb-12 flex cursor-pointer items-center gap-2'>
           <Image 
             src='/icons/logo.svg' 
             width={34} 
             height={34} 
             alt="Horizon logo" 
-            className="w-[24px] h-[24px] max-xl:w-14 max-xl:h-14"
+            className="size-[24px] max-xl:size-14"
           />
           <h1 className='2xl:text-26 font-ibm-plex-serif text-[26px] font-bold text-black-1 max-xl:hidden'>Horizon</h1>
         </Link>
@@ -41,10 +41,10 @@ const Sidebar = ({ user }: SidebarProps) => {
                     fill
                     className={cn(
                         'brightness-[3]', 
-                        { 'invert-0': isActive }  // Conditional class application
+                        { 'invert-0': isActive }
                       )}/>
                 </div>
-                <p className={cn("sidebar-label", { "!text-white": isActive })}>
+                <p className={cn("text-16 font-semibold text-black-2 max-xl:hidden-label", { "!text-white": isActive })}>
                 {item.label}
               </p>
             </Link>
